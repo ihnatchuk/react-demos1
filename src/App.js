@@ -16,7 +16,7 @@ function App() {
     <div>
       {
         users.map(value =>
-            <UserComponent id={value.id} name={value.name} email={value.email}/>
+            <UserComponent item={value}/>
         )
       }
 
