@@ -1,11 +1,11 @@
 import React from "react";
 
 function UserComponent(props) {
-    let {item}=props;
+    let {item:{id, name, email}}=props;
     return (
         <div>
-            <h2>{item.id}. {item.name}</h2>
-            <p>{item.email}</p>
+            <h2>{id}. {name}</h2>
+            <p>{email}</p>
         </div>
     );
 }

@@ -16,7 +16,7 @@ function App() {
     <div>
       {
         users.map(value =>
-            <UserComponent item={value}/>
+            <UserComponent key={value.id} item={value}/>
         )
       }
 
