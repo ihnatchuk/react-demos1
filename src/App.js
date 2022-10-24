@@ -1,6 +1,7 @@
 import './App.css';
 import {findAllByDisplayValue} from "@testing-library/react";
 import React, {useEffect, useState} from 'react';
+import UserComponent from "./UserComponent";
 
 function App() {
     let [users,setUsers]=useState([]);
@@ -14,10 +15,8 @@ function App() {
   return (
     <div>
       {
-        users.map(value => <div>
-          <h2>{value.id}. {value.name}</h2>
-          <p>{value.email}</p>
-        </div>
+        users.map(value =>
+            <UserComponent id={value.id} name={value.name} email={value.email}/>
         )
       }
 
